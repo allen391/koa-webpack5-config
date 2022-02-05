@@ -3,6 +3,6 @@ import LoginController from '../api/login-controller';
 
 const router = new Router();
 
-router.post('/forget', LoginController.forget)
+router.get('/forget', LoginController.forget)
 
 export default router;
