@@ -1,10 +1,8 @@
-const path = require('path');
+import path from 'path';
 
-function resolve(dir){
-  return path.join(__dirname, '..', dir)
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
 }
 
-exports.APP_PATH = resolve('src')
-exports.DIST_PATH = resolve('dist')
-
-
+exports.APP_PATH = resolve('src');
+exports.DIST_PATH = resolve('dist');

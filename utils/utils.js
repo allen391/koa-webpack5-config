@@ -3,7 +3,7 @@
  * @author Allen Chen
  */
 
-const log4j = require('./log4j');
+import log4j from './log4j';
 const CODE = {
   SUCCESS: 200, // success
   PARAM_ERROR: 10001, // Parameter error
@@ -32,11 +32,11 @@ module.exports = {
   },
   // Successful callback
   success(data = '', msg = '', code = CODE.SUCCESS) {
-    log4j.debug(data);
+    log4j.debug(`resData => ${data}`);
     return { code, data, msg };
   },
   // Failed callback
-  fail(data = '', msg = '', code = CODE > BUSINESS_ERROR) {
+  fail(msg = '', data = '', code = CODE.BUSINESS_ERROR) {
     log4j.debug(msg);
     return { code, data, msg };
   },

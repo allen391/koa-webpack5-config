@@ -27,6 +27,7 @@
     "koa-static": "^5.0.0",
     "log4js": "^6.4.6",
     "moment": "^2.29.1",
+    "mongoose": "^6.3.1",
     "nodemailer": "^6.7.2",
     "svg-captcha": "^1.4.0"
   },

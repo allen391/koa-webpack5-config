@@ -1,12 +1,12 @@
-const {merge} = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.config.base');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   stats: {
-    children:false,
-    warnings: false
+    children: false,
+    warnings: false,
   },
   optimization: {
     minimize: true,
@@ -18,16 +18,16 @@ const webpackConfig = merge(baseWebpackConfig, {
             warnings: false,
             drop_console: true,
             drop_debugger: true,
-            dead_code: true
+            dead_code: true,
           },
           output: {
             comments: false,
-            beautify: false
+            beautify: false,
           },
-          mangle: true
+          mangle: true,
         },
-        parallel: true
-      })
+        parallel: true,
+      }),
     ],
     splitChunks: {
       cacheGroups: {
@@ -35,11 +35,11 @@ const webpackConfig = merge(baseWebpackConfig, {
           name: 'commons',
           chunks: 'initial',
           minChunks: 3,
-          enforce: true
-        }
-      }
-    }
-  }
-})
+          enforce: true,
+        },
+      },
+    },
+  },
+});
 
-module.exports = webpackConfig
+module.exports = webpackConfig;
